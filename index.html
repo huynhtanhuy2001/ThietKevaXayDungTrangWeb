@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/style.css">
+        <title>DevBlog</title>
+
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li class="active">Trang chủ</li>
+                     <li class="menu">Giới thiệu</li>
+                     <li class="menu">Bài viết</li>
+                     <li class="menu">Liên lạc</li>
+                </ul>
+
+            </nav>
+            <div id="search">
+                <form>
+                    <input class="tim" type="text" placeholder="Tìm kiếm...">
+                </form>
+            </div>
+
+        </header>
+        <div class="container">
+            <h3>Ví dụ thao tác JavaScript với HTML, CSS</h3>
+            <p>Nội dung đang cập nhật...</p>
+            <button id="myBtn" >Đăng nhập</button>
+
+        </div>
+        <script>
+            var hover = document.getElementsByClassName("menu");
+            for(var i = 0; i < hover.length; i++) {
+                hover[i].onmousemove = function(){
+                    this.style.background = "#f2f2f2";
+                    this.style.color = "#000000";
+                };
+                hover[i].onmouseout = function(){
+                    this.style.background = "#000000";
+                    this.style.color = "#f2f2f2";
+                };
+            }
+        </script>
+      
+        <form id="frm">
+            <div id="myModal" class="modal">
+    
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                    <div class="avatar">
+                        <img src="./img/MicrosoftTeams-image (4).png" alt="avatar">
+    
+                    </div>
+                    <div class="modalForm">
+                        <p>Tài khoản:</p>
+                        <input type="text" class="info" id="taikhoan" placeholder="Nhập tên tài khoản">
+                        <p>Mật khẩu:</p>
+                        <input type="text" class="info" id="matkhau" placeholder="Nhập mật khẩu">
+                        <div class="button">
+                            <button onclick="checkLogin()">Đăng nhập</button>
+                            <input id="check"  type="checkbox" checked >
+                            <label for="check"> Nhớ tài khoản</label>
+                        </div>
+                        <div class="cancel">
+                            <button id="delete">Hủy bỏ</button>
+                            
+                            <span class="forgot"> Quên <a href="#">mật khẩu?</a></span>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                  
+                </div>
+              
+              </div>
+            </form>
+             <!-- Goi Form -->
+            <script>
+                var modal = document.getElementById("myModal");
+                var btn = document.getElementById("myBtn");
+                var span = document.getElementsByClassName("close")[0];
+                btn.onclick = function(){
+                    modal.style.display = "block";
+                }
+                var huybo = document.getElementById("delete");
+                huybo.onclick = function(){
+                    modal.style.display = "none";
+                }
+                span.onclick = function(){
+                    modal.style.display = "none";
+                }
+            </script>
+            <script>        
+                 function checkLogin(){
+                    var tendangnhap = document.getElementById('taikhoan').value;
+                    var matkhau = document.getElementById('matkhau').value;
+
+                    if(tendangnhap == 'admin' && matkhau == '123456'){
+                        alert('Đăng nhập thành công!!');
+                    }
+                    else if(tendangnhap != 'admin'){
+                        alert('Không có tài khoản này!');
+                    }else if(matkhau != '123456'){
+                        alert('Sai mật khẩu!');
+                    }else{alert('Lỗi đăng nhập');}
+                }
+            </script>
+    </body>
+</html>
