@@ -1,2 +1,0 @@
-# ThietKevaXayDungTrangWeb
-Huỳnh Tấn Huy
