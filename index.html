@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>VUS  Fitness Club</title>
+    <img src="./IMG/MicrosoftTeams-image.png" alt="Logo" width="800"  />
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+</head>
+<body>
+    <div id="header">
+        <nav>
+            <ul>
+                <li><a class="menu" href="#">Home</a></li>
+                <li><a class="menu" href="#">About Us</a></li>
+                <li><a class="menu" href="#">Classes</a></li>
+                <li><a class="menu" href="#">Nutrition</a></li>
+                <li><a class="menu" href="#">Contrac Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="container" >
+    
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./IMG/top-30-phong-gym-xin-nhat-quanh-ha-noi-6-1.png" style="width:100%">
+                <div class="text">VUS Fitness Club</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./IMG/thiet-ke-phong-tap-the-hinh-dep.jpg" style="width:100%">
+                <div class="text">VUS Fitness Club</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./IMG/thiet-ke-phong-gym-dep-1-1.jpg" style="width:100%">
+                <div class="text">VUS Fitness Club</div>
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
+        </div>
+    </div>
+    <main>
+    <div id="content">
+       <p>Welcom to VUS Fitness Club. Our mission is to help our client meet their fitness and nutrition goals.</p>
+       <p>If you have struggle with getting healthy and nees the motivation and resources to make a healthy lifestyle, contact us today. Our faccillity include state-of-the-art equipment, convenient group training classes, and nutritions tips and information to keep you healthy.</p>
+       <p>We provide a FREE, one-week membership to exprience the benefit of our equipment and facility. This one-week trail gives you complete access to our equipment, trainning classes, and nutrition planning. Contact us today to start your free trail!</p>
+    </div>
+</main>
+<footer>
+</div>
+<p>
+    &copy; Coppyright 2022. All Right Reserved. <br>
+    <a href="mailto:vusfitness@club.com">vusfitness@club.com</a>
+    </p>
+</div>
+</footer>
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+/* tu dong chuyen*/
+const preve = document.querySelector(".next")
+setInterval(()=>{
+ preve.click()
+},6000)
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
