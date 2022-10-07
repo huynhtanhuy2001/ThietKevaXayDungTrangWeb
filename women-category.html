@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời Trang Nữ</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/women-category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body onload="updatecart()">
+   <div id="main-body">
+    <header id="site-header">
+        <div id="topbar">
+            <p>CSKH:<a href="tel:098.1376.951"> 098.1376.951</a> / Email:<a href="mailto:huyhuynh47471@gmail.com"> huyhuynh47471@gmail.com</a></p>
+        </div>
+        <nav class="container">
+                    <a href="index.html" id="logo">
+                        <img src="./img/logo.png" alt="C&B.vn" width="90px" >
+                    </a>
+                    <ul id="main-menu">
+                        
+                        <li><a href="./index.html">Trang Chủ</a></li>
+                        <li><a href="./men-category.html">Thời Trang Nam</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Áo</a></li>
+                            <li><a href="">Quần</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="./women-category.html">Thời Trang Nữ</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Áo</a></li>
+                                <li><a href="">Quần</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                   <ul id="tab-menu">
+                    <li><label>
+                        <input type="text" placeholder="Tìm Kiếm...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </label></li>
+                    <li><a href="./shopping-cart.html" class="text-loggin2"><i class="fa-sharp fa-solid fa-cart-shopping"><p class="text-tabmenu">Giỏ Hàng</p></i></a></li>
+                    <li><i id="myBtn" class="fa-solid fa-user"><br><a class="text-loggin">Đăng Nhập</a></i></li>
+                    <li><i id="singUpBtn" class="fa-regular fa-registered"><br><a class="text-loggin">Đăng ký</a></i></li>
+                   </ul>
+        </nav> 
+    </header>
+    </div>
+    <main>
+     <div class="collection-filter-block d-flex">
+       <div class="warp-in">
+        <div id='side-bar-menu'>
+            <h1 class="head-title">Sản phẩm nữ</h1>
+            <ul>
+                <li><h3 href="#">Danh Mục</h3></li>
+                <li><a href="#">Áo</a></li>
+                <li><a href="#">Quần</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Sản phẩm mới</a></li>
+                <li><a href="#">Hỗ trợ trực tuyến</a></li>
+                <li><a href="#">Thống kê
+                </a></li>
+            </ul>
+        </div>  
+       </div>  
+    <div class="product-list flex-wrap">
+        <ul class="products-Nu">
+        </ul>
+    </div>
+     </div>
+     <div class="giftcard-box d-flex flex-wrap align-items-center">
+        <div class="gift-left">
+            <span class="gift-subtitle"></span>
+            <h3 class="gift-title">Khám phá thêm những trải nghiệm duy nhất chỉ có tại cửa hàng Offline</h3>
+            <p>Hãy để những trải nghiệm thời trang của bạn trở nên thật tuyệt vời cùng các sản phẩm C&B.
+                Đừng quên sử dụng hashtag #C&B để cùng chia sẻ khoảnh khắc với C&B nha.</p>
+            <a href="./index.html" class="gift-btn" title="Hệ thống cửa hàng">Hệ thống cửa hàng</a>
+        </div>
+        <div class="gift-right d-flex align-items-center">
+            <a href="#" title="Gift card 1" class="img-1">
+                <img class=" lazyloaded" src="./img/Ảnh chụp màn hình 2022-09-25 153016.png"alt="Gift card 1">
+            </a>
+            <a href="#" title="Gift card 2" class="img-2">
+                <img class=" lazyloaded" src="./img/Ảnh chụp màn hình 2022-09-25 152934.png"  alt="Gift card 2">
+            </a>
+        </div>
+    </div>
+    </main>
+    <footer><p>@2020 All Rights Reversed – Re-design by VU School</p></footer>
+   </div>
+   <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+   <script>
+    $(document).ready(function(){
+        // tìm tất cả  các li có sub menu//
+        $('.sub-menu').parent('li').addClass('has-child');
+    });
+   </script>
+<form id="frm">
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+            <div class="avatar">
+                <img src="./img/login.png" alt="avatar-login" width="155px" height="155px">
+
+            </div>
+            <div class="modalForm">
+                <p>Tài khoản:</p>
+                <input type="text" class="info" id="taikhoan" placeholder="Nhập tên tài khoản">
+                <p>Mật khẩu:</p>
+                <input type="password" class="info" id="matkhau" placeholder="Nhập mật khẩu">
+                <div class="button">
+                    <button onclick="checkLogin()">Đăng nhập</button>
+                    <input id="check"  type="checkbox" checked >
+                    <label for="check"> Nhớ tài khoản</label>
+                </div>
+                <div class="cancel">
+                    <button id="delete">Hủy bỏ</button>
+                    <span class="forgot"> Quên <a href="#">mật khẩu?</a></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+          
+        </div>
+      
+      </div>
+    </form>
+    <script>        
+        function checkLogin(){
+           var tendangnhap = document.getElementById('taikhoan').value;
+           var matkhau = document.getElementById('matkhau').value;
+
+           if(tendangnhap == 'admin' && matkhau == '123456'){
+               alert('Đăng nhập thành công!!');
+           }
+           else if(tendangnhap != 'admin'){
+               alert('Không có tài khoản này!');
+           }else if(matkhau != '123456'){
+               alert('Sai mật khẩu!');
+           }else{alert('Lỗi đăng nhập');}
+       }
+   </script>
+
+    <form id="frmSingUp" action="" method="POST" onsubmit="return validate()">
+        <div id="mySingUp" class="singup">
+        <div class="register">
+        <span class="close closeSingUp">&times;</span>  
+        <h1>Đăng ký</h1>
+        <p>Vui lòng điền thông tin để đăng ký</p>
+        <hr>
+        <label for="username"><b>Tên đăng nhập</b></label>
+        <input type="text" placeholder="Họ và tên" name="username" id="username">
+        <label for="password"><b>Mật khẩu</b></label>
+        <input type="password" placeholder="******" name="password" id="password">
+        <label for="password-repeat"><b>Nhập lại mật khẩu</b></label>
+        <input type="password" placeholder="******" name="password-repeat" id="password-repeat">
+        <hr>
+        <p>Để tạo tài khoản vui lòng đồng ý với điều khoản của chúng tôi <a href="#">Terms & Privacy</a>.</p>
+        <button type="submit" class="submitForm">Đăng ký</button>
+        </div>
+        <div class="register login">
+        <p>Bạn đã có tài khoản rồi? <a href="./index.html">Đăng nhập</a>.</p>
+        </div>
+    </div>
+    </form>
+     <!-- -------------------------kiem tra dăng ký----------------------------------------->
+     
+    <script>
+            function validate() {
+    var u = document.getElementById("username").value;
+    var p1 = document.getElementById("password").value;
+    var p2 = document.getElementById("password-repeat").value;
+ 
+    if(u== "") {
+    alert("Vui lòng nhập tên!");
+    return false;
+    }
+    if(p1 == "") {
+    alert("Vui lòng nhập mật khẩu!");
+    return false;
+    }
+    if(p2 == "") {
+    alert("Vui lòng xác minh mật khẩu!");
+    return false;
+    }
+ 
+    alert("Xin hãy điền đúng thông tin!")
+ 
+    return true;
+    }
+    </script>
+    <script>
+          var singup = document.getElementById("mySingUp");
+          var btn2 = document.getElementById("singUpBtn");
+          btn2.onclick = function(){
+            singup.style.display = "block";
+            modal.style.display = "none";
+        }
+        var spanSingUp = document.getElementsByClassName("closeSingUp")[0];
+        spanSingUp.onclick = function(){
+            singup.style.display = "none";
+        }
+
+
+        /*-----------------------------*/
+
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function(){
+            modal.style.display = "block";
+            singup.style.display = "none";
+        }
+        var huybo = document.getElementById("delete");
+        huybo.onclick = function(){
+            modal.style.display = "none";
+        }
+        span.onclick = function(){
+            modal.style.display = "none";
+        }
+    </script>
+    <script src="./js/shopping-cart.js"></script>
+</body>
+</html>
