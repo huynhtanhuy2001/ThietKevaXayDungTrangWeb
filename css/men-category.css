@@ -1,0 +1,235 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+  }
+
+body{
+    background-color: aquamarine;
+   margin: 0;
+   
+}
+
+.collection-filter-block {
+    padding: 40px 0;
+}
+.d-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left:0px;
+    margin-right:0px;
+    margin-top: 0px;
+    position: relative;
+}
+.head-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+    max-width: 162px;
+    line-height: 20px;
+}
+#side-bar-menu{
+    margin-left: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 200px;
+    transition: .3s all ease-in-out;
+}
+.wrap-in{
+    width: 100%;
+    max-width: 240px;
+    padding: 0 0 12px 0;
+    transition: all 0.3s ease;
+
+}
+
+#side-bar-menu > ul{
+    padding: 0 0 1px;
+    list-style: none;
+    max-width: 162px;
+    border-right: 2px solid #d3d3d3;
+    border-bottom:2px solid #d3d3d3 ;
+}
+#side-bar-menu > ul > li{
+    margin: 0 0 10px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+#side-bar-menu > ul > li > h3{
+    text-align: left;
+    font-weight: 700;
+}
+
+#side-bar-menu > ul > li > a{
+    text-align: left;
+    text-decoration: none;
+}
+#side-bar-menu > ul > li:hover > h3{
+    background-color:aquamarine ;
+}
+#side-bar-menu > ul > li:hover{
+    background-color: #446084;   
+}
+#side-bar-menu > ul > li:hover a{
+    color: white;   
+}
+/*----------------------------------------------------------------*/
+.product-list{
+    flex: 1 1 0%;
+    /* padding-left: 40px; */
+    margin-top: 100px;
+}
+ul.products-Nam{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    position: static;
+}
+ul.products-Nam > li {
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box; 
+    margin-bottom: 30px;
+}
+ul.products-Nam > li img{
+    width: 100%;
+    height: 450px;
+}
+ul.products-Nam li .product-top{
+    position: relative;
+    overflow: hidden;
+}
+ul.products-Nam li .product-top .product-thumb{
+    display: block;
+}
+ul.products-Nam li:hover .product-top .product-thumb img{
+    filter: opacity(80%);
+    border: 2px solid rgb(52, 85, 162);
+}
+ul.products-Nam li .product-top .product-thumb img{
+    display: block;
+}
+ul.products-Nam li .product-top a.buy-now{
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    background-color: #446084;
+    color: #fff;
+    padding: 10px 0px;
+    position: absolute;
+    bottom: -36px;
+    width: 100%;
+    transition: 0.25s ease-in-out;
+    opacity: 0.85;
+}
+ul.products-Nam li:hover a.buy-now{
+    bottom: 0px;
+}
+ul.products-Nam li .product-info{
+    padding: 10px 0px;
+}
+ul.products-Nam li .product-info a{
+    display: block;
+    text-decoration: none;
+}
+ul.products-Nam li .product-info a.product-cat{
+    font-size: 11px;
+    color: #f70606; ;
+    text-transform: uppercase;
+    padding: 3px 0px;
+    
+}
+ul.products-Nam li .product-info a.product-name{
+    color: #334862;
+    padding: 3px 0px;
+}
+ul.products-Nam li .product-info .product-price{
+    color: #111;
+    padding: 2px 0px;
+    font-weight: 600;
+}
+
+/* -------------    tablet ------------- */ 
+@media screen and (min-width: 768px) and (max-width: 1180px){
+ 
+   ul.products-1{
+ padding-left: 10px;
+   }
+  ul.products-1 li{
+    padding-left: 0;
+    }
+   .products-2{
+    padding-left: 10px;
+      }
+      ul.products-2 li{
+        padding-left: 0;
+        }
+   .gift-btn{
+    margin-bottom: 20px;
+   }
+   ul.products-Nam{
+    margin-right: 10px;
+    
+   }
+  ul.products-Nam li {
+   flex-basis: 32%;
+   padding: 0;
+   }
+}
+/* -------------    mobile ------------- */ 
+@media only screen and (min-width: 375px) and (max-width: 677px){
+   .d-flex{
+    display: grid;
+    grid-template-rows:auto;
+    padding: 10px;
+   }
+   #side-bar-menu{
+    margin-left: 30%;
+    padding: 0px;
+   }
+   .product-list{
+    margin: 0px;
+   }
+   ul.products-Nam{
+    padding: 0px;
+   }
+   ul.products-1{
+ padding-left: 10px;
+   }
+
+  ul.products-1 li{
+    padding-left: 0;
+    }
+   .products-2{
+    padding-left: 10px;
+      }
+      ul.products-2 li{
+        padding-left: 0;
+        }
+   .gift-btn{
+    margin-bottom: 20px;
+   }
+  ul.products-Nam li {
+   flex-basis: 48%;
+   padding: 0;
+   }
+   ul.products-1 > li {
+    flex-basis: 50%;
+    padding-left: 0px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+ul.products-2 > li {
+    flex-basis: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+}
